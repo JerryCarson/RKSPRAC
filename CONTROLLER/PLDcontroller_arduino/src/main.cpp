@@ -40,6 +40,10 @@ private:
     {
       pinMode(i, OUTPUT);
     }
+    for (int i = r + fp + 1; i <= r + fp + rRD; i++)
+    {
+      pinMode(i, INPUT);
+    }
   }
 
   void fromPLD() //Принимает код с шины ПЛИС, преобразует в десятичное число, выводит в порт
