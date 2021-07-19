@@ -1,0 +1,5 @@
+|count
+clk => ~NO_FANOUT~
+s <= <GND>
+
+

@@ -1,0 +1,27 @@
+|counter
+clk => m[0]~reg0.CLK
+clk => m[1]~reg0.CLK
+clk => m[2]~reg0.CLK
+clk => m[3]~reg0.CLK
+clk => m[4]~reg0.CLK
+clk => m[5]~reg0.CLK
+clk => m[6]~reg0.CLK
+clk => m[7]~reg0.CLK
+data[0] <= <GND>
+data[1] <= <GND>
+data[2] <= <GND>
+data[3] <= <GND>
+data[4] <= <GND>
+data[5] <= <GND>
+data[6] <= <GND>
+data[7] <= <GND>
+m[0] <= m[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+m[4] <= m[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+m[5] <= m[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+m[6] <= m[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+m[7] <= m[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
