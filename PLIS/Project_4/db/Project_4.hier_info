@@ -1,0 +1,26 @@
+|count3
+clk => ~NO_FANOUT~
+s[0] << <GND>
+s[1] << <GND>
+s[2] << <GND>
+s[3] << <GND>
+s[4] << <GND>
+s[5] << <GND>
+s[6] << <GND>
+s[7] << <GND>
+s[8] << <GND>
+s[9] << <GND>
+s[10] << <GND>
+m[0] => ~NO_FANOUT~
+m[1] => ~NO_FANOUT~
+m[2] => ~NO_FANOUT~
+m[3] => ~NO_FANOUT~
+m[4] => ~NO_FANOUT~
+m[5] => ~NO_FANOUT~
+m[6] => ~NO_FANOUT~
+m[7] => ~NO_FANOUT~
+m[8] => ~NO_FANOUT~
+m[9] => ~NO_FANOUT~
+m[10] => ~NO_FANOUT~
+
+
