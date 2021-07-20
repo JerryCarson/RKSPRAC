@@ -1,11 +1,4 @@
-|Block
-LED0 <= counter:inst.LED0
-CLK => counter:inst.CLK
-LED1 <= counter:inst.LED1
-LED2 <= counter:inst.LED2
-
-
-|Block|counter:inst
+|counter
 CLK => LED.CLK
 CLK => counter[0].CLK
 CLK => counter[1].CLK
@@ -32,8 +25,8 @@ CLK => counter[21].CLK
 CLK => counter[22].CLK
 CLK => counter[23].CLK
 CLK => counter[24].CLK
-LED0 <= LED.DB_MAX_OUTPUT_PORT_TYPE
-LED1 <= LED.DB_MAX_OUTPUT_PORT_TYPE
-LED2 <= LED.DB_MAX_OUTPUT_PORT_TYPE
+LED0 << LED.DB_MAX_OUTPUT_PORT_TYPE
+LED1 << Add0.DB_MAX_OUTPUT_PORT_TYPE
+LED2 << LED.DB_MAX_OUTPUT_PORT_TYPE
 
 
