@@ -1,0 +1,9 @@
+module number (
+ output reg [4:0] m
+ );
+ 
+ initial begin
+ assign m = 5'b01101;
+ end
+ 
+ endmodule

@@ -1,0 +1,17 @@
+module keep (
+input [1:0] a,
+output reg [10:0] out
+);
+
+always @(a) begin
+	case(a)
+	
+	1'd0: out = 5;
+	1'd1: out = 10;
+	1'd2: out = 15;
+	1'd3: out = 20;
+	
+	endcase
+end
+
+endmodule 

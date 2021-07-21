@@ -25,12 +25,11 @@
 
 module count3 (
 input clk,
-input [4:0] m,
+input [10:0] m,
 output reg [10:0] s
 );
-//output [10:0] sum;
 initial begin
-s = 1'b0;
+s = 11'b0;
 end
 
 always @(posedge clk) begin
@@ -38,4 +37,5 @@ always @(posedge clk) begin
 end
 
 endmodule 
+
 
