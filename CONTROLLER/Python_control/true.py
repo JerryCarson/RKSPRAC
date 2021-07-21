@@ -21,10 +21,10 @@ with serial.Serial(serial_port, baud_rate, timeout = 0) as ardu: #opens and auto
             if (value == 'END'): 
                 break
             print(value) # printing the value
-            output_file.write(value + '\n')
+            #output_file.write(value + '\n')
 
-data = np.loadtxt('output.txt')
-y = data[:]
-plt.plot(y)
-plt.ylabel('y')
-plt.show()
+# data = np.loadtxt('output.txt')
+# y = data[:]
+# plt.plot(y)
+# plt.ylabel('y')
+# plt.show()

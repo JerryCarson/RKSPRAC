@@ -24,9 +24,11 @@ private:
       {
       case 1:
         digitalWrite(i + fp, HIGH);
+        Serial.println('1');
         break;
       case 0:
         digitalWrite(i + fp, LOW);
+        Serial.println('0');
         break;
       }
     }
@@ -135,8 +137,8 @@ void loop()
         int s = atoi(ss.c_str());
         arduino.setCMD(s);
         arduino.updPins(); //Обновляем управляющий сигнал
-        delay(500);
-        arduino.getSignal(); //Получаем отсчеты сигнала с ПЛИС
+        //delay(500);
+        //arduino.getSignal(); //Получаем отсчеты сигнала с ПЛИС
         // for (int i = 0; i <= 360; i++)
         // {
         //   double a = 10 * cos(i * pi / 180);

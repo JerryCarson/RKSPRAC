@@ -33,8 +33,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 160 32)
 		(output)
-		(text "out[4..0]" (rect 0 0 33 12)(font "Arial" ))
-		(text "out[4..0]" (rect 106 27 139 39)(font "Arial" ))
+		(text "out[10..0]" (rect 0 0 35 12)(font "Arial" ))
+		(text "out[10..0]" (rect 104 27 139 39)(font "Arial" ))
 		(line (pt 160 32)(pt 144 32)(line_width 3))
 	)
 	(drawing

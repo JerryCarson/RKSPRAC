@@ -1,0 +1,16 @@
+|counter
+a[0] => Mux0.IN5
+a[0] => Mux1.IN5
+a[0] => Mux2.IN5
+a[1] => Mux0.IN4
+a[1] => Mux1.IN4
+a[1] => Mux2.IN4
+CLK => L2.CLK
+CLK => L1.CLK
+CLK => L0.CLK
+rdy => ~NO_FANOUT~
+LED0 <= L0.DB_MAX_OUTPUT_PORT_TYPE
+LED1 <= L1.DB_MAX_OUTPUT_PORT_TYPE
+LED2 <= L2.DB_MAX_OUTPUT_PORT_TYPE
+
+
