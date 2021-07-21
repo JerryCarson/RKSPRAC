@@ -23,14 +23,18 @@
 //
 //endmodule 
 
-module count3(clk, m, s, sum);
-input clk;
-input [10:0] m;
-input [10:0] s;
-output [10:0] sum;
+module count3 (
+input clk,
+input [4:0] m,
+output reg [10:0] s
+);
+//output [10:0] sum;
+initial begin
+s = 1'b0;
+end
 
 always @(posedge clk) begin
-	assign sum = s + m;
+	s <= s + m;
 end
 
 endmodule 
