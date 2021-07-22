@@ -1,4 +1,9 @@
 |Project_4_main
+LED0 <= keep:inst7.LED0
+a[0] => keep:inst7.a[0]
+a[1] => keep:inst7.a[1]
+LED1 <= keep:inst7.LED1
+LED2 <= keep:inst7.LED2
 q[0] <= ROM_4:inst6.q[0]
 q[1] <= ROM_4:inst6.q[1]
 q[2] <= ROM_4:inst6.q[2]
@@ -18,8 +23,38 @@ s[7] <= count3:inst.s[7]
 s[8] <= count3:inst.s[8]
 s[9] <= count3:inst.s[9]
 s[10] <= count3:inst.s[10]
-a[0] => keep:inst7.a[0]
-a[1] => keep:inst7.a[1]
+
+
+|Project_4_main|keep:inst7
+LED0 <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+LED1 <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+LED2 <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+a[0] => Mux1.IN5
+a[0] => Mux2.IN5
+a[0] => Mux3.IN5
+a[0] => Mux0.IN5
+a[0] => Mux4.IN5
+a[0] => Mux5.IN5
+a[0] => Mux6.IN5
+a[1] => Mux1.IN4
+a[1] => Mux2.IN4
+a[1] => Mux3.IN4
+a[1] => Mux0.IN4
+a[1] => Mux4.IN4
+a[1] => Mux5.IN4
+a[1] => Mux6.IN4
+out[0] <= out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= <GND>
+out[6] <= <GND>
+out[7] <= <GND>
+out[8] <= <GND>
+out[9] <= <GND>
+out[10] <= <GND>
+LED <= <GND>
 
 
 |Project_4_main|ROM_4:inst6
@@ -264,22 +299,5 @@ m[7] <= m[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
 m[8] <= m[8]$latch.DB_MAX_OUTPUT_PORT_TYPE
 m[9] <= <GND>
 m[10] <= <GND>
-
-
-|Project_4_main|keep:inst7
-a[0] => Decoder0.IN1
-a[0] => out[0].DATAIN
-a[1] => Decoder0.IN0
-out[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
-out[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-out[5] <= <GND>
-out[6] <= <GND>
-out[7] <= <GND>
-out[8] <= <GND>
-out[9] <= <GND>
-out[10] <= <GND>
 
 
