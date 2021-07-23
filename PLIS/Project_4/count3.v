@@ -26,6 +26,7 @@
 module count3 (
 input clk,
 input [10:0] m,
+input enb,
 output reg [10:0] s
 );
 initial begin
@@ -33,7 +34,10 @@ s = 11'b0;
 end
 
 always @(posedge clk) begin
+	if(enb) 
 	s <= s + m;
+	else 
+	s = 0;
 end
 
 endmodule 

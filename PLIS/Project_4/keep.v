@@ -17,6 +17,7 @@ always @(a) begin
 	LED0 = LED;
 	LED1 = ~ LED;
 	LED2 = ~ LED;
+	//$display("%d",LED0, LED1, LED2);
 	end
 	
 	11'd1: begin
