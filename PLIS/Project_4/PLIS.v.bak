@@ -1,0 +1,11 @@
+module PLIS (
+input [1:0] a,
+input wire rdy,
+input clk,
+output reg [10:0] s
+output reg [5:0] q,
+output full, empty );
+
+keep module_1(  .a[1:0](a[1:0], .LED0(LED0), .LED1(LED1), .LED2(LED2), .out[10:0](out[10:0]) );
+number module_2( .out[10:0](out[10:0]), .m[10:0](m[10:0]) );
+

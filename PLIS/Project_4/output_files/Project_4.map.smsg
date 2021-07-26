@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at keep.v(9): always construct contains both blocking and non-blocking assignments File: E:/Verilog/RKSPRAC/PLIS/Project_4/keep.v Line: 9
+Warning (10268): Verilog HDL information at count3.v(36): always construct contains both blocking and non-blocking assignments File: C:/Users/User/Desktop/PLIS/RKSPRAC/PLIS/Project_4/count3.v Line: 36

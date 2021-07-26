@@ -4,27 +4,47 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "q[5]",
+					"name" : "LED0",
 					"strict" : false
 				},
 				{
-					"name" : "q[4]",
+					"name" : "LED1",
 					"strict" : false
 				},
 				{
-					"name" : "q[3]",
+					"name" : "LED2",
 					"strict" : false
 				},
 				{
-					"name" : "q[2]",
+					"name" : "full",
 					"strict" : false
 				},
 				{
-					"name" : "q[1]",
+					"name" : "empty",
 					"strict" : false
 				},
 				{
-					"name" : "q[0]",
+					"name" : "data_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[0]",
 					"strict" : false
 				},
 				{
@@ -72,7 +92,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "a[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rdclk",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "ready",
 					"strict" : false
 				}
 			]
