@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("E:/Verilog/RKSPRAC/PLIS/Project_4/output_files/") File("Project_4.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE6E22) Path("E:/Verilog/Project_4/output_files/") File("Project_4.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

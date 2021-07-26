@@ -6,10 +6,10 @@ module number (
 always @(out) begin
 	case(out)
 	
-	11'd0: m = 11'd103;
-	11'd1: m = 11'd205;
-	11'd2: m = 11'd308;
-	11'd3: m = 11'd410;
+	11'd5: m = 11'd103;
+	11'd10: m = 11'd205;
+	11'd15: m = 11'd308;
+	11'd20: m = 11'd410;
 	
 	endcase
 end

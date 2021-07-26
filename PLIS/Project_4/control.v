@@ -1,23 +1,43 @@
-module control (
-input wire rdy, empty, full,
-output reg enb );
+module control
+(
+read_full,
+read_empty,
+read_req,
+clk,
+);
 
-always @(rdy or empty or full)
-begin
-	if(rdy) begin
-	
-		case(full)
-		1'b1: enb = 0;
-		1'b0: enb = 1;
-		endcase
-		
-		case(empty)
-		1'b1: enb = 1;
-		1'b0: enb = 0;
-		endcase
-		
+input read_full;
+input read_empty;
+output read_req;
+input clk;
+reg read_req;
+reg check;
+initial check = 0;
+initial read_req = 0;
+
+always @(posedge clk)
+	begin
+		if(read_full == 1)
+			begin
+			check = 1;
+			read_req = 1;
+			end
+		else if(read_full == 0)
+			begin
+				if (read_empty == 1)
+					begin
+						check = 0;
+						read_req = 0;
+					end
+				else if (read_empty == 0)
+					begin
+						if (check == 1)
+						read_req = 1;
+					end
+			end
+		else
+			begin
+				read_req = 0;
+			end
 	end
-end
 endmodule
-		
-		
