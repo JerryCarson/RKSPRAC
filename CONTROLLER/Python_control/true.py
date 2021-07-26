@@ -2,7 +2,9 @@ import serial #requires pip install pyserial
 import matplotlib.pyplot as plt
 import numpy  as np
 
-serial_port = 'COM3' #set your COM port value
+k=0
+
+serial_port = 'COM19' #set your COM port value
 
 baud_rate = 9600; #set same as Arduino has
 write_to_file_path = "output.txt"
@@ -21,10 +23,12 @@ with serial.Serial(serial_port, baud_rate, timeout = 0) as ardu: #opens and auto
             if (value == 'END'): 
                 break
             print(value) # printing the value
-            #output_file.write(value + '\n')
+            k = k+1
+            output_file.write(value + '\n')
 
-# data = np.loadtxt('output.txt')
-# y = data[:]
-# plt.plot(y)
-# plt.ylabel('y')
-# plt.show()
+print(k)
+data = np.loadtxt('output.txt')
+y = data[:]
+plt.plot(y)
+plt.ylabel('y')
+plt.show()

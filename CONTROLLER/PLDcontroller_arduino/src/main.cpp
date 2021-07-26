@@ -24,13 +24,14 @@ private:
       {
       case 1:
         digitalWrite(i + fp, HIGH);
-        Serial.println('1');
+        //Serial.println('1');
         break;
       case 0:
         digitalWrite(i + fp, LOW);
-        Serial.println('0');
+        //Serial.println('0');
         break;
       }
+      //Serial.println('_');
     }
     digitalWrite(r + fp, HIGH); //Стробирующий импульс READY, означает окончание формирования сигнала на шине
     delay(1000);
@@ -65,7 +66,7 @@ private:
 public:
   void getSignal() //Получаем числа с шины данных и выводим в порт
   {
-    for (int i = 0; i <= count; i++)
+    for (int i = 0; i < count; i++)
     {
       digitalWrite(fp + r + rRD + 1, HIGH);
       fromPLD();
@@ -126,7 +127,7 @@ void setup()
 
 void loop()
 {
-  toPLD arduino(2, 2, 8, 256); //Разрядность упр. шины, первый пин, разрядность шины данных, количество отсчетов сигнала
+  toPLD arduino(2, 2, 6, 16384); //Разрядность упр. шины, первый пин, разрядность шины данных, количество отсчетов сигнала
   while (true)                 //Это кривое говно нужно чтобы не переопределять экземпляр каждую итерацию
   {
     if (Serial.available())
@@ -137,8 +138,17 @@ void loop()
         int s = atoi(ss.c_str());
         arduino.setCMD(s);
         arduino.updPins(); //Обновляем управляющий сигнал
-        //delay(500);
-        //arduino.getSignal(); //Получаем отсчеты сигнала с ПЛИС
+        delay(500);
+
+        pinMode(4, INPUT);
+        pinMode(13, INPUT);
+
+        while (digitalRead(4) != 1)
+        {
+          
+        }
+
+        arduino.getSignal(); //Получаем отсчеты сигнала с ПЛИС
         // for (int i = 0; i <= 360; i++)
         // {
         //   double a = 10 * cos(i * pi / 180);
