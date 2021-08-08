@@ -3,8 +3,6 @@
 int s;
 double pi = 3.1415;
 
-//#include <EEPROM.h>
-
 class toPLD
 {
 private:
@@ -19,21 +17,17 @@ private:
     for (int i = r - 1; i >= 0; --i)
     {
       int f = ((int)((x >> i) & 1)); //преобразование куска числа в двоичный код, начиная со старшего разряда
-      //Serial.println(f, DEC); //Строчка для дебага
       switch (f)
       {
       case 1:
         digitalWrite(i + fp, HIGH);
-        //Serial.println('1');
         break;
       case 0:
         digitalWrite(i + fp, LOW);
-        //Serial.println('0');
         break;
       }
-      //Serial.println('_');
     }
-    digitalWrite(r + fp, HIGH); //Стробирующий импульс READY, означает окончание формирования сигнала на шине
+    digitalWrite(r + fp, HIGH); //Импульс READY, означает окончание формирования сигнала на шине
     delay(1000);
     digitalWrite(r + fp, LOW);
   }
@@ -106,20 +100,6 @@ public:
   }
 };
 
-// int fromPLD(int r, int f)
-// {
-//   String s = "";
-//   for (int i = f + r; i <= f + r + 8; i++)
-//   {
-//     int c = digitalRead(i);
-//     s += (char)('0' + c);
-//   }
-//   int result = 0;
-//   for (int i = s.length(), pos = 0; i >= 0; i--, ++pos)
-//     result += s[i] == '0' ? 0 : 1 << pos;
-//   return result;
-// }
-
 void setup()
 {
   Serial.begin(9600);
@@ -149,12 +129,6 @@ void loop()
         }
 
         arduino.getSignal(); //Получаем отсчеты сигнала с ПЛИС
-        // for (int i = 0; i <= 360; i++)
-        // {
-        //   double a = 10 * cos(i * pi / 180);
-        //   Serial.println(a / 10, DEC);
-        // }
-        // Serial.println("END");
       }
     }
   }
